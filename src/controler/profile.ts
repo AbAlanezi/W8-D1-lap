@@ -34,7 +34,7 @@ export const getUser = async (req:Request, res:Response)=>{
 export const createProfile = async (req:Request, res:Response)=>{
     try{
         const profile = req.body
-    await prisma.profile.create({
+    await prisma.user.create({
             data:profile
         })
         res.json({

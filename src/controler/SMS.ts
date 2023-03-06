@@ -127,7 +127,7 @@ export const getTeacher = async (req:Request, res:Response)=>{
     try{
         const teacher = await prisma.teacher.findMany({
           select:{
-            name: true
+            nametch: true
           }  
         })
         res.json(teacher)
@@ -222,3 +222,5 @@ export const ClassById = async (req:Request, res:Response)=>{
         console.log(e)
     }
 }
+
+
